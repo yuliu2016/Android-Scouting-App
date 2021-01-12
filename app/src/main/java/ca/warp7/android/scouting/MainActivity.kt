@@ -116,9 +116,8 @@ class MainActivity : AppCompatActivity() {
     /**
      * Handle the top-right menu clicks
      */
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        val it = item?.itemId ?: return false
-        when (it) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
             R.id.menu_new_entry -> onNewEntry()
             R.id.menu_settings -> startActivity(Intent(this, SettingsActivity::class.java))
         }
@@ -266,7 +265,8 @@ class MainActivity : AppCompatActivity() {
             try {
                 qrImage.setImageBitmap(createQRBitmap(entryInMatch.data, dim))
             } catch (e: WriterException) {
-                qrImage.setImageDrawable(getDrawable(R.drawable.ic_launcher_foreground))
+                qrImage.setImageDrawable(ContextCompat
+                        .getDrawable(this, R.drawable.ic_launcher_foreground))
                 e.printStackTrace()
             }
         }
@@ -409,7 +409,7 @@ class MainActivity : AppCompatActivity() {
     private fun onNewEntry() {
         val layout = View.inflate(this, R.layout.dialog_new_entry, null) as LinearLayout
         val matchEdit = layout.findViewById<EditText>(R.id.dialog_match)
-        val teamEdit = layout.findViewById<EditText>(R.id.dialog_match)
+        val teamEdit = layout.findViewById<EditText>(R.id.dialog_team)
 
         val dialog = AlertDialog.Builder(this)
                 .setTitle(getString(R.string.add_new_entry))
