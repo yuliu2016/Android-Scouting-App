@@ -21,7 +21,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         val aboutApp = findPreference<Preference>(getString(R.string.pref_about_key))
         if (aboutApp != null) {
-            aboutApp.summary = getString(R.string.version_name) +
+            aboutApp.summary = getString(R.string.version_name) + " " +
                     BuildConfig.VERSION_NAME + "-" + BuildConfig.BUILD_TYPE
         }
 

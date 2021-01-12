@@ -5,10 +5,6 @@ plugins {
     kotlin("android")
 }
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
-}
-
 android {
     compileSdkVersion(30)
     defaultConfig {
@@ -16,7 +12,7 @@ android {
         minSdkVersion(21)
         targetSdkVersion(30)
         versionCode = 1
-        versionName = "2020.2.0"
+        versionName = "2021.1.0"
         resConfigs("en", "hdpi")
 
         // Read the TBA key from local properties
