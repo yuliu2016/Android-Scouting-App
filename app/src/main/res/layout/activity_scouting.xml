@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
@@ -18,7 +19,6 @@
         android:paddingBottom="0dp">
 
         <TextView
-            android:drawableStart="@drawable/ic_layers_small"
             android:drawablePadding="4dp"
             android:id="@+id/toolbar_match"
             android:layout_width="wrap_content"
@@ -26,10 +26,10 @@
             android:paddingEnd="12dp"
             android:paddingStart="0dp"
             android:textColor="@color/primaryDark"
-            android:textSize="17sp"/>
+            android:textSize="17sp"
+            app:drawableStartCompat="@drawable/ic_layers_small" />
 
         <TextView
-            android:drawableStart="@drawable/ic_book_small"
             android:drawablePadding="4dp"
             android:id="@+id/toolbar_board"
             android:layout_width="wrap_content"
@@ -37,10 +37,10 @@
             android:gravity="center"
             android:textSize="17sp"
             android:paddingEnd="12dp"
-            android:paddingStart="0dp"/>
+            android:paddingStart="0dp"
+            app:drawableStartCompat="@drawable/ic_book_small" />
 
         <TextView
-            android:drawableStart="@drawable/ic_people_small"
             android:drawablePadding="4dp"
             android:id="@+id/toolbar_team"
             android:layout_width="wrap_content"
@@ -49,10 +49,10 @@
             android:textSize="17sp"
             android:textColor="@color/primaryDark"
             android:paddingEnd="12dp"
-            android:paddingStart="0dp"/>
+            android:paddingStart="0dp"
+            app:drawableStartCompat="@drawable/ic_people_small" />
 
         <TextView
-            android:drawableStart="@drawable/ic_timer_small"
             android:drawablePadding="4dp"
             android:id="@+id/timer_status"
             android:layout_width="wrap_content"
@@ -62,7 +62,8 @@
             android:textColor="@android:color/black"
             android:textSize="17sp"
             android:paddingEnd="12dp"
-            android:paddingStart="0dp"/>
+            android:paddingStart="0dp"
+            app:drawableStartCompat="@drawable/ic_timer_small" />
 
     </LinearLayout>
 

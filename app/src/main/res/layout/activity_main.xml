@@ -33,7 +33,6 @@
             android:gravity="center"
             android:textSize="17sp"
             android:textStyle="normal"
-            android:drawableStart="@drawable/ic_book_small"
             android:background="@drawable/ripple_transparent"
             android:focusable="true"
             android:drawablePadding="4dp"
@@ -41,7 +40,8 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:paddingTop="8dp"
-            android:paddingBottom="8dp"/>
+            android:paddingBottom="8dp"
+            app:drawableStartCompat="@drawable/ic_book_small" />
 
         <TextView
             android:id="@+id/scout_name"
@@ -51,7 +51,6 @@
             android:textSize="17sp"
             android:textStyle="normal"
             android:textColor="@color/primaryDark"
-            android:drawableStart="@drawable/ic_account_box_small"
             android:background="@drawable/ripple_transparent"
             android:drawablePadding="4dp"
             android:paddingStart="20dp"
@@ -59,7 +58,8 @@
             android:paddingTop="8dp"
             android:clickable="true"
             android:paddingBottom="8dp"
-            android:focusable="true"/>
+            android:focusable="true"
+            app:drawableStartCompat="@drawable/ic_account_box_small" />
 
     </LinearLayout>
 
