@@ -5,6 +5,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
@@ -89,7 +90,7 @@ class ScoutingActivity : AppCompatActivity(), BaseScoutingActivity {
 
     private var entryInMatch: EntryInMatch? = null
 
-    private val handler = Handler()
+    private val handler = Handler(Looper.getMainLooper())
     private val periodicUpdater = Runnable { periodicUpdate() }
 
     /**

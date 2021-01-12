@@ -54,6 +54,10 @@ fun validateName(str: String): Boolean {
 val boards = Board.values()
 val relBoards = RelativeBoard.values()
 
+/**
+ * Change template strings (e.g. "B1 blocks shots")
+ * into the actual team name/number of the specific match
+ */
 @SuppressLint("DefaultLocale")
 fun modifyNameForDisplay(eim: EntryInMatch?, name: String): String {
     var varName = name

@@ -15,6 +15,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.Button
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import ca.warp7.android.scouting.BaseScoutingActivity
 import ca.warp7.android.scouting.R
@@ -70,7 +71,8 @@ class QRCodeFragment : Fragment(), ScoutingEntryTab {
         try {
             qrImage.setImageBitmap(createQRBitmap(message, dim))
         } catch (e: WriterException) {
-            qrImage.setImageDrawable(context?.getDrawable(R.drawable.ic_launcher_foreground))
+            qrImage.setImageDrawable(ContextCompat
+                    .getDrawable(requireContext(), R.drawable.ic_launcher_foreground))
             e.printStackTrace()
         }
     }
